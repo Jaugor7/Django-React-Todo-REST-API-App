@@ -1,0 +1,7 @@
+{% autoescape off %}
+    Hi Buddy
+    please click this link to verify your account
+
+    {{domain|slice:":-1"}}{% url 'myOauth:activate' uidb64=uid token=token %}
+
+{% endautoescape %}
